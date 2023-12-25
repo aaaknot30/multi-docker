@@ -22,3 +22,15 @@ after_success:
   - docker push aaaknot30/multi-nginx
   - docker push aaaknot30/multi-server
   - docker push aaaknot30/multi-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: 'us-east-2'
+  app: 'multi-docker'
+  env: 'Multi-docker-env'
+  bucket_name: 'elasticbeanstalk-us-east-2-023733569960'
+  bucket_path: 'docker-multi'
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
