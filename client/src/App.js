@@ -17,7 +17,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React and Caged Tigers!
+            Learn React and Banana Nut!
           </a>
           <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
